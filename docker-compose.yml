@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    container_name: balumama-earthmovers
+    env_file: .env          # SMTP credentials live here, never in the image
+    ports:
+      - "8080:3001"
+    restart: unless-stopped
